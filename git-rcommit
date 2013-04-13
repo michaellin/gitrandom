@@ -1,6 +1,17 @@
 #!/usr/bin/env python
 
 import subprocess as sp
+import random as r
+import math as m
 
+Subject = ["This code ", "My life ", "This program ", "Today ", "This laptop "]
+Verb = ["sux ", "smell ", "looks ", "works ", "feels ", "gets "]
+Adverb = ["wonderful", "incredible", "ugly as %^&*", "miserable", "shaddy", "better than Zach Galifianakis'"]
+isub = m.ceil(r.random()*length(Subject))
+iverb = m.ceil(r.random()*length(Verb))
+iadv = m.ceil(r.random()*length(Adverb))
+
+phrase = Subject[isub] + Verb[iverb] + Adverb[iadv]
 p = sp.call("git add -A", shell=True)
-p = sp.call("git commit -m 'hello'", shell=True)
+p = sp.call("git commit -m '" + phrase + "'", shell=True)
+
