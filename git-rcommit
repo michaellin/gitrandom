@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+
+import subprocess as sp
+
+p = sp.call("git add -A", shell=True)
+p = sp.call("git commit -m 'hello'", shell=True)
